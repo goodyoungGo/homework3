@@ -13,7 +13,7 @@ typedef struct {
 } student2;
 
 int main() {
-    
+    printf("[----- [Goh Geon Young]  [2020017027] -----]\n");
     struct student1 st1 = {'A', 100, 'A'};    
     
     printf("st1.lastName = %c\n", st1.lastName);
