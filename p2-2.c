@@ -24,7 +24,7 @@ int main() {
     printf(" print_one(one, 5) \n");
     printf("------------------------------------\n");
     
-    print_one(one, 5); // print_one 함수에 매개변수 one 배열이 저장되어있는 주소값과 정수 5를 전달.
+    print_one(one, 5); // print_one 함수에 매개변수 one 배열이 저장되어있는 첫번째 주소값과 정수 5를 전달.
     
     return 0; // 0 반환 및 프로그램 종료
 }
