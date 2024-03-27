@@ -2,8 +2,8 @@
 
 struct student { // student 구조체 선언
     char lastName[13]; // char 배열(13 bytes) lastName 선언
-    int studentId; // 정수형 배열(4 bytes) studentId 선언
-    short grade; // short형 배열(2 bytes) grade 선언
+    int studentId; // 정수형 (4 bytes) studentId 선언
+    short grade; // short형 (2 bytes) grade 선언
 };
 
 int main() {
