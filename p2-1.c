@@ -40,8 +40,8 @@ void main(void) {
 }
 
 float sum1(float list[], int n) {
-    printf("list \t= %p\n", list); // 매개변수 list 배열이 저장된 시작 주소 출력
-    printf("&list \t= %p\n\n", &list); // 매개변수  배열이 저장되어있는 있는 주소 출력
+    printf("list \t= %p\n", list); // call by reference로 호출 시 받아온 배열(input)의 시작 주소를 출력
+    printf("&list \t= %p\n\n", &list); // 매개변수 list 배열이 저장되어있는 있는 주소 출력
     int i; // 정수형 변수 i 선언
     float tempsum = 0; // 실수형 변수 tempsum에 0 값 할당.
     for(i = 0; i < n; i++) // i가 0에서 99까지 100번 반복 (매개변수 정수형 변수 n은 100의 값을 받았다.)
@@ -50,8 +50,8 @@ float sum1(float list[], int n) {
 }
 
 float sum2(float *list, int n) {
-    printf("list \t= %p\n", list); // 매개변수 list 배열이 저장된 시작 주소 출력
-    printf("&list \t= %p\n\n", &list); // 매개변수  배열이 저장되어있는 있는 주소 출력
+    printf("list \t= %p\n", list); // call by reference로 호출 시 받아온 배열(input)의 시작 주소를 출력
+    printf("&list \t= %p\n\n", &list); // 매개변수 list 배열이 저장되어있는 있는 주소 출력
     int i; // 정수형 변수 i 선언
     float tempsum = 0; // 실수형 변수 tempsum에 0 값 할당.
 
@@ -61,9 +61,9 @@ float sum2(float *list, int n) {
 }
 
 /* stack variable reuse test */
-float sum3(int n, float *list) {
-    printf("list \t= %p\n", list); // 매개변수 list 배열이 저장된 시작 주소 출력
-    printf("&list \t= %p\n\n", &list); // 매개변수  배열이 저장되어있는 있는 주소 출력
+float sum3(int n, float *list) { // sum2와 다르게 매개변수의 순서가 다르게 받아온다. 그럼 sum2의 매개변수의 list의 시작주소와는 다른 값이 나타나게 된다.
+    printf("list \t= %p\n", list); // call by reference로 호출 시 받아온 배열(input)의 시작 주소를 출력
+    printf("&list \t= %p\n\n", &list); // 매개변수 list 배열이 저장되어있는 있는 주소 출력
     int i; // 정수형 변수 i 선언
     float tempsum = 0; // 실수형 변수 tempsum에 0 값 할당.
     for(i = 0; i < n; i++) // i가 0에서 99까지 100번 반복 (매개변수 정수형 변수 n은 100의 값을 받았다.)

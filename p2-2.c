@@ -30,7 +30,7 @@ int main() {
 }
     
 
-void print_one(int *ptr, int rows) {
+void print_one(int *ptr, int rows) { // 함수 내부에서 call by reference의 값을 포인터 변수 ptr로 받고, call by value로 rows라는 변수로 받는다.
     /* print out a one-dimensional array using a pointer */
     int i; // 정수형 변수 i 선언
     printf ("Address \t Contents\n");
