@@ -11,7 +11,7 @@ int main() {
     list[0] = 1; // list 첫번째 공간에 1을 할당
     list[1] = 100; // list 두번째 공간에 100을 할당
     
-    *plist[0] = 200; // plist 첫번째 공간(int 크기의 메모리)에 할당된 메모리에 값 200을 저장
+    *plist[0] = 200; // plist 첫번째 공간(int 크기의 메모리)에 할당된 메모리 주소값 안에 값 200을 저장
     
     
     printf("list[0] = %d\n", list[0]); // list의 첫번째 공간에 저장된 값 출력
@@ -41,7 +41,7 @@ int main() {
     
     printf("plist = %p\n", plist); // plist 배열이 저장된 시작 주소 출력 (&plist, &plist[0] 랑 같다.)
     
-    printf("plist[0] = %p\n", plist[0]); // plist 배열의 첫번째 공간에 할당된 메모리 주소 출력
+    printf("plist[0] = %p\n", plist[0]); // plist 배열의 첫번째 공간에 할당된 메모리 주소 출력 (첫번째 공간에 정수형 int 공간을 동적 할당을 하였으므로 값이 나온다)
     
     printf("plist[1] = %p\n", plist[1]); // plist 배열의 두번째 공간에 할당된 메모리 주소 출력
     
